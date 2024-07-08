@@ -405,7 +405,6 @@ class UpdateLicensesCommand extends Command
 
         $content = json_decode($file->getContents(), true);
         $oldContent = $content;
-        $content['author'] = 'PrestaShop';
         $content['license'] = (false !== strpos($this->license, 'afl')) ? 'AFL-3.0' : 'OSL-3.0';
 
         if (!$this->runAsDry) {
